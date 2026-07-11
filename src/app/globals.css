@@ -142,3 +142,12 @@ body {
 .editorial-text p {
   margin-bottom: 1.5em;
 }
+
+/* Hide scrollbar utility */
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}

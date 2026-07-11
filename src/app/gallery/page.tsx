@@ -283,16 +283,6 @@ export default function GalleryPage() {
           onNext={goNext}
         />
       )}
-
-      <style jsx global>{`
-        .scrollbar-hide {
-          -ms-overflow-style: none;
-          scrollbar-width: none;
-        }
-        .scrollbar-hide::-webkit-scrollbar {
-          display: none;
-        }
-      `}</style>
     </main>
   );
 }
