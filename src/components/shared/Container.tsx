@@ -7,7 +7,7 @@ interface ContainerProps {
 
 export default function Container({ children, className }: ContainerProps) {
   return (
-    <div className={clsx("max-w-site mx-auto px-4 sm:px-6 lg:px-8", className)}>
+    <div className={clsx("max-w-site mx-auto px-5 sm:px-6 lg:px-10", className)}>
       {children}
     </div>
   );

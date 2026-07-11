@@ -15,74 +15,61 @@ export default function Header() {
   const pathname = usePathname();
 
   useEffect(() => {
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 80);
-    };
-
+    const handleScroll = () => setScrolled(window.scrollY > 40);
     window.addEventListener("scroll", handleScroll, { passive: true });
     handleScroll();
-
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const closeMobileNav = useCallback(() => {
-    setMobileNavOpen(false);
-  }, []);
+  const closeMobileNav = useCallback(() => setMobileNavOpen(false), []);
 
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-200 ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "bg-cream shadow-sm"
+            ? "bg-ivory/95 backdrop-blur-md shadow-[0_1px_0_0_rgba(42,30,24,0.08)]"
             : "bg-transparent"
         }`}
       >
-        <div className="max-w-site mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16 md:h-20">
+        <div className="max-w-site mx-auto px-5 sm:px-6 lg:px-10">
+          <div className="flex items-center justify-between h-[68px] md:h-[74px]">
             {/* Logo */}
-            <Link
-              href="/"
-              className="relative z-10"
-              aria-label={cafe.name}
-            >
-              <LogoWordmark
-                className={`h-7 md:h-8 w-auto transition-colors duration-200 ${
-                  scrolled ? "" : ""
-                }`}
-                dark={false}
-              />
+            <Link href="/" className="relative z-10 shrink-0" aria-label={cafe.name}>
+              <LogoWordmark className="h-6 md:h-7 w-auto" dark={false} />
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center gap-8" aria-label="Main navigation">
+            <nav className="hidden md:flex items-center gap-8 lg:gap-10" aria-label="Main navigation">
               {mainNavigation.map((item) => {
                 const isActive = pathname === item.href;
                 return (
                   <Link
                     key={item.href}
                     href={item.href}
-                    className={`font-sans text-sm font-medium tracking-wide transition-colors duration-200 ${
+                    className={`relative text-[0.8125rem] font-medium tracking-wide transition-colors duration-300 ${
                       isActive
                         ? "text-tangerine"
-                        : "text-espresso/80 hover:text-espresso"
+                        : "text-espresso/70 hover:text-espresso"
                     }`}
                   >
                     {item.label}
+                    {isActive && (
+                      <span className="absolute -bottom-1 left-0 right-0 h-[1.5px] bg-tangerine" />
+                    )}
                   </Link>
                 );
               })}
             </nav>
 
             {/* Desktop CTA + Mobile Menu */}
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-3">
               <Link
-                href={cafe.reservationUrl}
-                className="hidden md:inline-flex items-center bg-tangerine text-ivory font-sans text-sm font-semibold uppercase tracking-wider rounded-full px-5 py-2 transition-transform duration-200 hover:scale-[1.02]"
+                href="/contact?reason=reservation"
+                className="hidden md:inline-flex items-center px-5 py-2 text-[0.8125rem] font-semibold uppercase tracking-wider bg-tangerine text-ivory rounded-sm hover:bg-tangerine/90 transition-colors duration-300"
               >
                 Book a Table
               </Link>
-
               <button
                 type="button"
                 className="md:hidden relative z-10 p-2 -mr-2 text-espresso"
@@ -90,7 +77,7 @@ export default function Header() {
                 aria-label="Open menu"
                 aria-expanded={mobileNavOpen}
               >
-                <Menu className="w-6 h-6" />
+                <Menu className="w-5 h-5" />
               </button>
             </div>
           </div>
