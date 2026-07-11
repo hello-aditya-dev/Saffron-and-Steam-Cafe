@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
+@config "../../tailwind.config.ts";
 
 @theme {
   --color-cream: #F3EBDD;
