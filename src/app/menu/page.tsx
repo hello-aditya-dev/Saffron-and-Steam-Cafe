@@ -29,7 +29,7 @@ function MenuItemRow({ item, index }: { item: MenuItem; index: number }) {
       layout
       initial={{ opacity: 0, y: 8 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "-20px' }}
+      viewport={{ once: true, margin: "-20px" }}
       transition={{ duration: 0.35, ease: "easeOut" }}
       className={`flex items-start gap-3 sm:gap-4 py-4 sm:py-5 ${
         item.popular ? "bg-cream/60 sm:bg-cream -mx-2 sm:mx-0 px-2 sm:px-4 rounded-brand" : ""

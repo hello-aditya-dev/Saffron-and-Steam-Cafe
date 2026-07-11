@@ -47,9 +47,7 @@ interface GeneralFormData {
   consent: boolean;
 }
 
-interface FormErrors<T> {
-  [K in keyof T]?: string;
-}
+type FormErrors<T> = Partial<Record<keyof T, string>>;
 
 /* ------------------------------------------------------------------ */
 /*  Contact Page (server layout wraps client form)                      */
