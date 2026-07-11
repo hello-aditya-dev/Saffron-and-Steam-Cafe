@@ -42,7 +42,7 @@ export default function AboutPage() {
   return (
     <main className="min-h-screen bg-ivory">
       {/* Hero */}
-      <section className="relative overflow-hidden bg-cream">
+      <section className="relative overflow-hidden bg-cream isolation-isolate">
         <div className="grid lg:grid-cols-2 min-h-[60vh] lg:min-h-[70vh]">
           <div className="flex items-end pb-12 lg:pb-16 lg:pl-10">
             <Container>
@@ -79,7 +79,7 @@ export default function AboutPage() {
               <div className="relative aspect-[4/5] rounded-brand overflow-hidden">
                 <ImageReveal>
                   <Image
-                    src="/images/interiors/warm-cafe-interior.webp"
+                    src="/images/home/home-interior-wide.webp"
                     alt="Inside view of the café with wooden tables and warm lighting"
                     fill
                     className="object-cover"
@@ -122,8 +122,8 @@ export default function AboutPage() {
             >
               <div className="relative aspect-square w-full overflow-hidden rounded-brand sm:aspect-[3/4]">
                 <Image
-                  src="/images/hero/hero-coffee-cup-detail.webp"
-                  alt="Espresso being poured in the morning"
+                  src="/images/about/morning-espresso.webp"
+                  alt="Barista preparing espresso in the morning"
                   fill
                   sizes="120px"
                   className="object-cover"
@@ -153,8 +153,8 @@ export default function AboutPage() {
             >
               <div className="relative aspect-square w-full overflow-hidden rounded-brand sm:aspect-[3/4] sm:order-1">
                 <Image
-                  src="/images/hero/cafe-hero-brunch-table.webp"
-                  alt="Brunch spread on a café table"
+                  src="/images/about/afternoon-brunch.webp"
+                  alt="Friends sharing brunch at a café table in the afternoon"
                   fill
                   sizes="120px"
                   className="object-cover"
@@ -184,7 +184,7 @@ export default function AboutPage() {
             >
               <div className="relative aspect-square w-full overflow-hidden rounded-brand sm:aspect-[3/4]">
                 <Image
-                  src="/images/gallery/evening-candle-table.webp"
+                  src="/images/about/evening-candle-table.webp"
                   alt="Candlelit table in the evening at Saffron & Steam"
                   fill
                   sizes="120px"

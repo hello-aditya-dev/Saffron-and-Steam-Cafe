@@ -99,7 +99,7 @@ export default function Home() {
 
 function HeroSection() {
   return (
-    <section className="relative min-h-[100svh] flex items-center overflow-hidden bg-ivory">
+    <section className="relative min-h-[100svh] flex items-center overflow-hidden bg-ivory isolation-isolate">
       <Container className="py-28 lg:py-0 lg:min-h-[100svh]">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 items-center">
           {/* Text — 7 cols */}
@@ -221,7 +221,7 @@ function IntroductionSection() {
             <div className="relative aspect-[4/5] rounded-brand overflow-hidden">
               <ImageReveal>
                 <Image
-                  src="/images/interiors/warm-cafe-interior.webp"
+                  src="/images/home/home-interior-wide.webp"
                   alt="Warm interior of Saffron & Steam with wooden furniture and natural light"
                   fill
                   className="object-cover"
@@ -235,7 +235,7 @@ function IntroductionSection() {
               className="absolute -bottom-4 -right-2 sm:right-[-1.5rem] w-28 h-28 sm:w-36 sm:h-36 rounded-brand overflow-hidden shadow-xl border-[3px] border-ivory z-10"
             >
               <Image
-                src="/images/gallery/coffee-beans-detail.webp"
+                src="/images/home/home-story-detail.webp"
                 alt=""
                 fill
                 className="object-cover"
@@ -280,16 +280,16 @@ function ThreePartsSection() {
   const parts = [
     {
       label: 'Morning',
-      image: '/images/gallery/barista-pouring-espresso.webp',
-      alt: 'Barista carefully pouring espresso into a ceramic cup',
+      image: '/images/home/morning-barista.webp',
+      alt: 'Barista preparing espresso in the morning',
       text: 'Balanced espresso, slow pours and seasonal drinks made without unnecessary fuss.',
       link: '/menu#coffee',
       tone: 'bg-ivory',
     },
     {
       label: 'Midday',
-      image: '/images/gallery/brunch-spread-table.webp',
-      alt: 'Colourful brunch spread on a wooden café table',
+      image: '/images/home/midday-brunch.webp',
+      alt: 'Colourful brunch spread with toast, eggs and pancakes',
       text: 'Bright bowls, crisp-edged toast, soft eggs, pancakes and plates designed for sharing.',
       link: '/menu#brunch',
       tone: 'bg-cream',
@@ -297,8 +297,8 @@ function ThreePartsSection() {
     },
     {
       label: 'Evening',
-      image: '/images/gallery/evening-candle-table.webp',
-      alt: 'Candlelit café table in the evening with warm ambient light',
+      image: '/images/home/evening-table.webp',
+      alt: 'Candlelit café table with small plates in the evening',
       text: 'Smaller plates, desserts and drinks for the part of the day that should not be rushed.',
       link: '/menu#small-plates',
       tone: 'bg-espresso text-ivory',
@@ -454,9 +454,9 @@ function MenuFavItem({ item, index }: { item: MenuItem; index: number }) {
 
 function AtmosphereSection() {
   return (
-    <section className="relative h-[65vh] md:h-[80vh] flex items-end overflow-hidden">
+    <section className="relative h-[65vh] md:h-[80vh] flex items-end overflow-hidden isolation-isolate">
       <Image
-        src="/images/interiors/cafe-wooden-tables.webp"
+        src="/images/home/home-room-wide.webp"
         alt="Café interior with warm wooden tables and ambient lighting"
         fill
         className="object-cover"
@@ -759,7 +759,7 @@ function VisitSection() {
           <motion.div {...fadeUp(0.15)} className="lg:col-span-7 relative rounded-brand overflow-hidden min-h-[360px]">
             <ImageReveal>
               <Image
-                src="/images/gallery/cafe-exterior-street.webp"
+                src="/images/contact/cafe-exterior-hero.webp"
                 alt="Café exterior with plants and a warm-lit entrance on a quiet street"
                 fill
                 className="object-cover"

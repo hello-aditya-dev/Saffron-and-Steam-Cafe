@@ -61,9 +61,9 @@ export default function ContactPage() {
   return (
     <main className="min-h-screen bg-ivory">
       {/* Hero */}
-      <section className="relative h-56 sm:h-72 lg:h-80 overflow-hidden">
+      <section className="relative h-56 sm:h-72 lg:h-80 overflow-hidden isolation-isolate">
         <Image
-          src="/images/gallery/cafe-exterior-street.webp"
+          src="/images/contact/cafe-exterior-hero.webp"
           alt="Saffron & Steam café exterior on a tree-lined street"
           fill
           sizes="100vw"
@@ -92,7 +92,7 @@ export default function ContactPage() {
           )}
 
           {/* FAQ */}
-          <section className="bg-cream py-section -mx-5 mt-section px-5">
+          <section className="bg-cream py-section mt-8 px-5">
             <Container className="max-w-2xl">
               <SectionHeading eyebrow="Frequently asked" title="Common questions" align="left" className="mb-8" />
               <Accordion type="single" collapsible className="w-full">

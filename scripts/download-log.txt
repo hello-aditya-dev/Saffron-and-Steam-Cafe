@@ -1,0 +1,60 @@
+[09:55:59]   -> https://sfile.chatglm.cn/images-ppt/b945358756db.jpg
+[09:56:01] WARN: No cwebp, saved as jpg
+[09:56:01] SEARCH: About: Evening candle
+[09:56:07]   -> https://sfile.chatglm.cn/images-ppt/f86359cd39d4.jpg
+[09:56:09] WARN: No cwebp, saved as jpg
+[09:56:09] SEARCH: G: Barista
+[09:56:15]   -> https://sfile.chatglm.cn/images-ppt/c7373ae7bfa9.jpg
+[09:56:18] WARN: No cwebp, saved as jpg
+[09:56:18] SEARCH: G: Latte art
+[09:56:24]   -> https://sfile.chatglm.cn/images-ppt/a2b70aa203eb.jpg
+[09:56:27] WARN: No cwebp, saved as jpg
+[09:56:27] SEARCH: G: Pancakes
+[09:56:35]   -> https://sfile.chatglm.cn/images-ppt/116f1a0ef6ba.jpg
+[09:56:37] WARN: No cwebp, saved as jpg
+[09:56:37] SEARCH: G: Brunch spread
+[09:56:44]   -> https://sfile.chatglm.cn/images-ppt/ba8a70481b22.jpg
+[09:56:46] WARN: No cwebp, saved as jpg
+[09:56:46] SEARCH: G: Avocado toast
+[09:56:52]   -> https://sfile.chatglm.cn/images-ppt/ee878cefe570.jpg
+[09:56:54] WARN: No cwebp, saved as jpg
+[09:56:54] SEARCH: G: Warm interior
+[09:57:00]   -> https://sfile.chatglm.cn/images-ppt/339900f8f68f.jpg
+[09:57:02] WARN: No cwebp, saved as jpg
+[09:57:02] SEARCH: G: Window seat
+[09:57:06]   -> https://sfile.chatglm.cn/images-ppt/c084db73d27c.jpg
+[09:57:09] WARN: No cwebp, saved as jpg
+[09:57:09] SEARCH: G: Coffee counter
+[09:57:13]   -> https://sfile.chatglm.cn/images-ppt/e6acafd92ffc.jpg
+[09:57:16] WARN: No cwebp, saved as jpg
+[09:57:16] SEARCH: G: Friends
+[09:57:21]   -> https://sfile.chatglm.cn/images-ppt/24753fcfe2eb.jpg
+[09:57:23] WARN: No cwebp, saved as jpg
+[09:57:23] SEARCH: G: Group brunch
+[09:57:28]   -> https://sfile.chatglm.cn/images-ppt/ba4b0cede682.jpg
+[09:57:30] WARN: No cwebp, saved as jpg
+[09:57:30] SEARCH: G: Coffee beans
+[09:57:35]   -> https://sfile.chatglm.cn/images-ppt/cfcf467de3df.jpeg
+[09:57:38] WARN: No cwebp, saved as jpeg
+[09:57:38] SEARCH: G: Pastry display
+[09:57:42]   -> https://sfile.chatglm.cn/images-ppt/4007c76380cf.jpg
+[09:57:44] WARN: No cwebp, saved as jpg
+[09:57:44] SEARCH: G: Evening candle
+[09:57:48]   -> https://sfile.chatglm.cn/images-ppt/ade5c4ab3ef5.jpg
+[09:57:50] WARN: No cwebp, saved as jpg
+[09:57:50] SEARCH: G: Evening atmosphere
+[09:57:58]   -> https://sfile.chatglm.cn/images-ppt/094425f2c151.jpeg
+[09:58:01] WARN: No cwebp, saved as jpeg
+[09:58:01] SEARCH: G: Herb garden
+[09:58:08]   -> https://sfile.chatglm.cn/images-ppt/20f19e1e93e6.jpg
+[09:58:10] WARN: No cwebp, saved as jpg
+[09:58:10] SEARCH: G: Exterior
+[09:58:15]   -> https://sfile.chatglm.cn/images-ppt/1a3be039c2dd.jpg
+[09:58:17] WARN: No cwebp, saved as jpg
+[09:58:17] SEARCH: G: Chilli eggs
+[09:58:23]   -> https://sfile.chatglm.cn/images-ppt/ce38f9b2a622.jpg
+[09:58:28] WARN: No cwebp, saved as jpg
+[09:58:28] SEARCH: G: Cup hands
+[09:58:31]   -> https://sfile.chatglm.cn/images-ppt/f20654c522de.jpeg
+[09:58:34] WARN: No cwebp, saved as jpeg
+[09:58:34] === COMPLETE ===

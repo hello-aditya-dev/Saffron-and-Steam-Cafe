@@ -187,7 +187,7 @@ export const menuCategories: MenuCategory[] = [
         price: 420,
         dietary: ["V"],
         popular: true,
-        image: "/images/menu/saffron-pancakes.webp",
+        image: "/images/menu/saffron-honey-pancakes.webp",
       },
       {
         id: "br2",
@@ -221,7 +221,7 @@ export const menuCategories: MenuCategory[] = [
           "Brioche soaked in rose-scented custard, pistachios and maple drizzle.",
         price: 420,
         dietary: ["V"],
-        image: "/images/menu/french-toast.webp",
+        image: "/images/menu/rose-pistachio-french-toast.webp",
       },
       {
         id: "br6",

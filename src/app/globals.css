@@ -50,6 +50,10 @@
   max-width: var(--content-max);
 }
 
+@utility isolation-isolate {
+  isolation: isolate;
+}
+
 @utility text-balance {
   text-wrap: balance;
 }
