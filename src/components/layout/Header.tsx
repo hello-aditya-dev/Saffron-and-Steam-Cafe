@@ -28,12 +28,12 @@ export default function Header() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           scrolled
-            ? "bg-ivory/95 backdrop-blur-md shadow-[0_1px_0_0_rgba(42,30,24,0.08)]"
+            ? "bg-ivory/95 backdrop-blur-md shadow-[0_1px_0_0_rgba(38,25,20,0.08)]"
             : "bg-transparent"
         }`}
       >
-        <div className="max-w-site mx-auto px-5 sm:px-6 lg:px-10">
-          <div className="flex items-center justify-between h-[68px] md:h-[74px]">
+        <div className="mx-auto w-[calc(100%-40px)] max-w-[1320px]">
+          <div className="flex items-center justify-between h-[72px] md:h-[80px] lg:h-[84px]">
             {/* Logo */}
             <Link href="/" className="relative z-10 shrink-0" aria-label={cafe.name}>
               <LogoWordmark className="h-6 md:h-7 w-auto" dark={false} />
@@ -47,6 +47,7 @@ export default function Header() {
                   <Link
                     key={item.href}
                     href={item.href}
+                    aria-current={isActive ? "page" : undefined}
                     className={`relative text-[0.8125rem] font-medium tracking-wide transition-colors duration-300 ${
                       isActive
                         ? "text-tangerine"
@@ -66,7 +67,7 @@ export default function Header() {
             <div className="flex items-center gap-3">
               <Link
                 href="/contact?reason=reservation"
-                className="hidden md:inline-flex items-center px-5 py-2 text-[0.8125rem] font-semibold uppercase tracking-wider bg-tangerine text-ivory rounded-sm hover:bg-tangerine/90 transition-colors duration-300"
+                className="hidden md:inline-flex items-center px-5 py-2.5 text-[0.8125rem] font-semibold uppercase tracking-wider bg-tangerine text-ivory rounded-sm hover:bg-tangerine-hover transition-colors duration-300"
               >
                 Book a Table
               </Link>
@@ -77,7 +78,7 @@ export default function Header() {
                 aria-label="Open menu"
                 aria-expanded={mobileNavOpen}
               >
-                <Menu className="w-5 h-5" />
+                <Menu className="w-5 h-5" strokeWidth={1.5} />
               </button>
             </div>
           </div>

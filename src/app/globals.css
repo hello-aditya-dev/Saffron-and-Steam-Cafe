@@ -7,43 +7,52 @@
 
 @theme {
   /* Colour palette */
-  --color-ivory: #FBF7EF;
-  --color-cream: #F3EBDD;
+  --color-ivory: #F7F1E7;
+  --color-cream: #EFE4D4;
   --color-sand: #E8DCC8;
-  --color-espresso: #2A1E18;
+  --color-espresso: #261914;
   --color-cocoa: #3A2922;
-  --color-olive: #74724A;
+  --color-olive: #6E6259;
   --color-rose: #BE7567;
-  --color-tangerine: #D65A31;
+  --color-tangerine: #D95C35;
+  --color-tangerine-hover: #BE4726;
   --color-saffron: #E9A23B;
-  --color-border: rgba(42, 30, 24, 0.14);
+  --color-olive-green: #6C7259;
+  --color-border: rgba(38, 25, 20, 0.14);
+  --color-surface: #FFFDF8;
+  --color-surface-warm: #F3E6D3;
+  --color-footer-bg: #241713;
+  --color-footer-text: #F5EDE3;
 
-  /* Typography */
-  --font-serif: "DM Serif Display", Georgia, serif;
-  --font-sans: "DM Sans", system-ui, sans-serif;
+  /* Typography — set by next/font CSS vars */
+  --font-serif: var(--font-instrument-serif), "Instrument Serif", Georgia, serif;
+  --font-sans: var(--font-manrope), "Manrope", system-ui, sans-serif;
 
-  /* Display type scale — editorial */
-  --text-display: clamp(3.75rem, 7vw, 7.5rem) / 0.95;
+  /* Display type scale */
+  --text-display: clamp(3.8rem, 7.8vw, 8.5rem) / 0.95;
   --text-display-sm: clamp(2.5rem, 5vw, 5rem) / 0.98;
-  --text-heading: clamp(2rem, 4.5vw, 4rem) / 1.05;
+  --text-heading: clamp(2.2rem, 4.2vw, 4.8rem) / 1.05;
   --text-subheading: clamp(1.5rem, 2.5vw, 2.5rem) / 1.15;
-  --text-body-lg: clamp(1.0625rem, 1.2vw, 1.1875rem) / 1.65;
-  --text-body: 1rem;
-  --text-caption: 0.8125rem;
+  --text-body-lg: clamp(1.05rem, 1.3vw, 1.35rem) / 1.65;
+  --text-body: 1rem / 1.6;
+  --text-caption: 0.875rem;
   --text-overline: 0.75rem;
 
   /* Spacing */
-  --spacing-section: clamp(3.5rem, 8vw, 6rem);
-  --spacing-section-lg: clamp(4.5rem, 10vw, 9rem);
-  --content-max: 1360px;
+  --spacing-section: clamp(4.5rem, 8vw, 7rem);
+  --spacing-section-lg: clamp(5rem, 10vw, 9rem);
+  --content-max: 1320px;
 
   /* Shape */
   --radius-brand: 2px;
   --radius-pill: 9999px;
+  --radius-sm: 10px;
+  --radius-md: 16px;
+  --radius-lg: 20px;
 }
 
 /* ================================================================== */
-/*  UTILITY CLASSES                                                   */
+/*  UTILITY CLASSES                                                    */
 /* ================================================================== */
 
 @utility max-w-site {
@@ -67,7 +76,7 @@
 }
 
 /* ================================================================== */
-/*  BASE STYLES                                                       */
+/*  BASE STYLES                                                        */
 /* ================================================================== */
 
 html {
@@ -103,7 +112,7 @@ body {
 }
 
 /* ================================================================== */
-/*  SKIP LINK                                                         */
+/*  SKIP LINK                                                          */
 /* ================================================================== */
 
 .skip-link {
@@ -123,7 +132,7 @@ body {
 }
 
 /* ================================================================== */
-/*  GRAIN OVERLAY                                                     */
+/*  GRAIN OVERLAY                                                      */
 /* ================================================================== */
 
 .grain-overlay {
@@ -131,7 +140,7 @@ body {
   inset: 0;
   pointer-events: none;
   z-index: 9999;
-  opacity: 0.03;
+  opacity: 0.025;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
   background-repeat: repeat;
   background-size: 256px;
@@ -163,18 +172,6 @@ body {
 }
 
 /* ================================================================== */
-/*  IMAGE REVEAL                                                       */
-/* ================================================================== */
-
-.image-reveal {
-  clip-path: inset(100% 0 0 0);
-  transition: clip-path 0.8s cubic-bezier(0.77, 0, 0.175, 1);
-}
-.image-reveal.revealed {
-  clip-path: inset(0 0 0 0);
-}
-
-/* ================================================================== */
 /*  SCROLLBAR                                                          */
 /* ================================================================== */
 
@@ -193,7 +190,7 @@ body {
 }
 
 /* ================================================================== */
-/*  FOCUS                                                             */
+/*  FOCUS                                                              */
 /* ================================================================== */
 
 *:focus-visible {
@@ -211,7 +208,7 @@ body {
 }
 
 /* ================================================================== */
-/*  REFINED LINK                                                      */
+/*  REFINED LINK                                                       */
 /* ================================================================== */
 
 .link-underline {
@@ -232,23 +229,71 @@ body {
 }
 
 /* ================================================================== */
-/*  IMAGE HOVER SCALE                                                 */
+/*  IMAGE HOVER SCALE                                                  */
 /* ================================================================== */
 
 .img-hover-zoom {
   overflow: hidden;
 }
-.img-hover-zoom img {
+.img-hover-zoom img,
+.img-hover-zoom > div > img {
   transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
 }
-.img-hover-zoom:hover img {
+.img-hover-zoom:hover img,
+.img-hover-zoom:hover > div > img {
   transform: scale(1.05);
 }
 
 /* ================================================================== */
-/*  HAIRLINE SEPARATOR                                                  */
+/*  HAIRLINE SEPARATOR                                                 */
 /* ================================================================== */
 
 .hairline {
   border-top: 1px solid var(--color-border);
+}
+
+/* ================================================================== */
+/*  BODY SCROLL LOCK (for mobile nav)                                  */
+/* ================================================================== */
+
+body.scroll-locked {
+  overflow: hidden;
+}
+
+/* ================================================================== */
+/*  HERO CLIP REVEAL                                                   */
+/* ================================================================== */
+
+.hero-line-clip {
+  clip-path: inset(0 0 100% 0);
+}
+
+/* ================================================================== */
+/*  EMBLA OVERRIDES                                                    */
+/* ================================================================== */
+
+.embla {
+  overflow: hidden;
+}
+
+.embla__container {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.embla__slide {
+  flex: 0 0 80%;
+  min-width: 0;
+}
+
+@media (min-width: 768px) {
+  .embla__slide {
+    flex: 0 0 45%;
+  }
+}
+
+@media (min-width: 1280px) {
+  .embla__slide {
+    flex: 0 0 33.333%;
+  }
 }

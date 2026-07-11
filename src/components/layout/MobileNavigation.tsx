@@ -49,10 +49,9 @@ export default function MobileNavigation({ isOpen, onClose }: MobileNavigationPr
   useEffect(() => {
     if (isOpen) {
       previousFocusRef.current = document.activeElement as HTMLElement;
-      document.body.style.overflow = "hidden";
+      document.body.classList.add("scroll-locked");
       document.addEventListener("keydown", handleKeyDown);
 
-      // Focus first link after animation
       const timer = setTimeout(() => {
         firstLinkRef.current?.focus();
       }, 100);
@@ -60,7 +59,7 @@ export default function MobileNavigation({ isOpen, onClose }: MobileNavigationPr
       return () => {
         clearTimeout(timer);
         document.removeEventListener("keydown", handleKeyDown);
-        document.body.style.overflow = "";
+        document.body.classList.remove("scroll-locked");
         previousFocusRef.current?.focus();
       };
     }
@@ -78,7 +77,7 @@ export default function MobileNavigation({ isOpen, onClose }: MobileNavigationPr
           initial={{ x: "100%", opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           exit={{ x: "100%", opacity: 0 }}
-          transition={{ duration: 0.3, ease: [0.77, 0, 0.175, 1] }}
+          transition={{ duration: 0.35, ease: [0.77, 0, 0.175, 1] }}
         >
           {/* Top bar */}
           <div className="flex items-center justify-between px-6 pt-6 pb-4">
@@ -89,12 +88,12 @@ export default function MobileNavigation({ isOpen, onClose }: MobileNavigationPr
               className="p-2 -mr-2 text-ivory/70 hover:text-ivory transition-colors duration-200"
               aria-label="Close menu"
             >
-              <X className="w-6 h-6" />
+              <X className="w-6 h-6" strokeWidth={1.5} />
             </button>
           </div>
 
           {/* Navigation links */}
-          <nav className="flex-1 flex flex-col justify-center px-6 gap-6">
+          <nav className="flex-1 flex flex-col justify-center px-8 gap-7">
             {mainNavigation.map((item, index) => (
               <motion.div
                 key={item.href}
@@ -119,12 +118,12 @@ export default function MobileNavigation({ isOpen, onClose }: MobileNavigationPr
           </nav>
 
           {/* Bottom info */}
-          <div className="px-6 pb-8 space-y-6">
+          <div className="px-8 pb-10 space-y-6">
             {/* Opening hours */}
             <div className="space-y-2">
               {cafe.hours.map((slot) => (
                 <div key={slot.days} className="flex items-start gap-3 text-ivory/60 text-sm">
-                  <Clock className="w-4 h-4 mt-0.5 shrink-0" />
+                  <Clock className="w-4 h-4 mt-0.5 shrink-0" strokeWidth={1.5} />
                   <div>
                     <p className="text-ivory/90 font-medium">{slot.days}</p>
                     <p>{slot.time}</p>
@@ -138,17 +137,17 @@ export default function MobileNavigation({ isOpen, onClose }: MobileNavigationPr
 
             {/* Address */}
             <div className="flex items-start gap-3 text-ivory/60 text-sm">
-              <MapPin className="w-4 h-4 mt-0.5 shrink-0" />
+              <MapPin className="w-4 h-4 mt-0.5 shrink-0" strokeWidth={1.5} />
               <address className="not-italic text-ivory/90">{cafe.address.full}</address>
             </div>
 
             {/* Phone + Instagram */}
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-5">
               <a
                 href={`tel:${cafe.phone}`}
                 className="flex items-center gap-2 text-ivory/60 hover:text-ivory text-sm transition-colors duration-200"
               >
-                <Phone className="w-4 h-4" />
+                <Phone className="w-4 h-4" strokeWidth={1.5} />
                 {cafe.phone}
               </a>
               <a
@@ -158,7 +157,7 @@ export default function MobileNavigation({ isOpen, onClose }: MobileNavigationPr
                 className="text-ivory/60 hover:text-saffron transition-colors duration-200"
                 aria-label="Instagram"
               >
-                <Instagram className="w-5 h-5" />
+                <Instagram className="w-5 h-5" strokeWidth={1.5} />
               </a>
             </div>
 
@@ -167,14 +166,14 @@ export default function MobileNavigation({ isOpen, onClose }: MobileNavigationPr
               <Link
                 href={cafe.reservationUrl}
                 onClick={onClose}
-                className="inline-flex items-center justify-center bg-tangerine text-ivory font-sans text-sm font-semibold uppercase tracking-wider rounded-full py-3 px-6 transition-transform duration-200 hover:scale-[1.02]"
+                className="inline-flex items-center justify-center bg-tangerine text-ivory font-sans text-sm font-semibold uppercase tracking-wider rounded-sm py-3 px-6 transition-transform duration-200 hover:scale-[1.02]"
               >
                 Book a Table
               </Link>
               <Link
                 href={cafe.orderingUrl}
                 onClick={onClose}
-                className="inline-flex items-center justify-center border border-ivory/30 text-ivory font-sans text-sm font-semibold uppercase tracking-wider rounded-full py-3 px-6 transition-colors duration-200 hover:border-ivory/60"
+                className="inline-flex items-center justify-center border border-ivory/30 text-ivory font-sans text-sm font-semibold uppercase tracking-wider rounded-sm py-3 px-6 transition-colors duration-200 hover:border-ivory/60"
               >
                 View Menu
               </Link>
