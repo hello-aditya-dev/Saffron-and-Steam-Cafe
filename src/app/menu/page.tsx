@@ -11,7 +11,7 @@ import {
   type DietaryKey,
 } from "@/data/menu";
 import Container from "@/components/shared/Container";
-import SectionHeading from "@/components/ui/SectionHeading";
+import SectionHeading from "@/components/shared/SectionHeading";
 import Button from "@/components/ui/Button";
 
 /* ------------------------------------------------------------------ */
@@ -390,6 +390,7 @@ export default function MenuPage() {
           <SectionHeading
             eyebrow="MENU"
             title="The menu follows the day."
+            align="center"
           />
           <p className="mt-4 text-body-lg text-olive leading-relaxed max-w-2xl">
             From a quick morning espresso to a long evening with shared plates.

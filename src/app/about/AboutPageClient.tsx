@@ -3,7 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import Container from "@/components/shared/Container";
-import SectionHeading from "@/components/ui/SectionHeading";
+import SectionHeading from "@/components/shared/SectionHeading";
 import Reveal from "@/components/ui/Reveal";
 import ImageReveal from "@/components/shared/ImageReveal";
 import Button from "@/components/ui/Button";
@@ -241,7 +241,7 @@ export default function AboutPage() {
       {/* Team */}
       <section className="py-[--spacing-section] bg-cream">
         <Container>
-          <SectionHeading eyebrow="The team" title="The people behind the counter" />
+          <SectionHeading eyebrow="The team" title="The people behind the counter" align="center" />
           <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-3 max-w-4xl">
             <StaggerGroup className="contents" staggerDelay={0.1}>
               {team.map((person) => (
