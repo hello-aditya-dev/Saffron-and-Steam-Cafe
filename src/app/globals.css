@@ -12,16 +12,6 @@
   --color-rose: #BE7567;
   --font-serif: "DM Serif Display", Georgia, serif;
   --font-sans: "DM Sans", system-ui, sans-serif;
-  --text-display: clamp(3rem, 8vw, 7rem) / 0.95;
-  --text-display-sm: clamp(2rem, 5vw, 4.5rem) / 1;
-  --text-heading: clamp(1.75rem, 4vw, 3.5rem) / 1.1;
-  --text-subheading: clamp(1.25rem, 2.5vw, 2rem) / 1.2;
-  --text-body-lg: clamp(1.05rem, 1.5vw, 1.25rem) / 1.6;
-  --radius-brand: 2px;
-}
-
-@utility max-w-site {
-  max-width: 1440px;
 }
 
 html {
@@ -140,4 +130,34 @@ body {
 /* Prose-like editorial text */
 .editorial-text p {
   margin-bottom: 1.5em;
+}
+
+/* Custom utilities (max-w-site, text with line-heights) */
+@layer utilities {
+  .max-w-site {
+    max-width: 1440px;
+  }
+  .text-display {
+    font-size: clamp(3rem, 8vw, 7rem);
+    line-height: 0.95;
+  }
+  .text-display-sm {
+    font-size: clamp(2rem, 5vw, 4.5rem);
+    line-height: 1;
+  }
+  .text-heading {
+    font-size: clamp(1.75rem, 4vw, 3.5rem);
+    line-height: 1.1;
+  }
+  .text-subheading {
+    font-size: clamp(1.25rem, 2.5vw, 2rem);
+    line-height: 1.2;
+  }
+  .text-body-lg {
+    font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+    line-height: 1.6;
+  }
+  .rounded-brand {
+    border-radius: 2px;
+  }
 }
