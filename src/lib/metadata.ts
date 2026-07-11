@@ -29,7 +29,7 @@ export function makeMetadata(overrides: Partial<Metadata> & { path?: string } = 
       locale: "en_IN",
       images: [
         {
-          url: "/og-image.png",
+          url: "/favicon.svg",
           width: 1200,
           height: 630,
           alt: `${SITE_NAME} — ${DEFAULT_DESCRIPTION}`,
@@ -45,7 +45,7 @@ export function makeMetadata(overrides: Partial<Metadata> & { path?: string } = 
     },
     icons: {
       icon: "/favicon.svg",
-      apple: "/apple-touch-icon.png",
+      apple: "/favicon.svg",
     },
     ...rest,
   };

@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev -p 3000",
-    "build": "node build.js",
+    "build": "next build",
     "start": "next start",
     "lint": "eslint .",
     "typecheck": "tsc --noEmit"
@@ -17,7 +17,6 @@
     "next": "^16.1.1",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
-    "sharp": "^0.34.3",
     "tailwind-merge": "^3.3.1"
   },
   "devDependencies": {

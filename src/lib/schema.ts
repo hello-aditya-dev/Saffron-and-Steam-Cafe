@@ -8,7 +8,7 @@ export function getRestaurantSchema() {
     description: cafe.description,
     url: cafe.url,
     logo: `${cafe.url}/favicon.svg`,
-    image: `${cafe.url}/og-image.png`,
+    image: `${cafe.url}/favicon.svg`,
     telephone: cafe.phone,
     email: cafe.email,
     address: {

@@ -328,7 +328,7 @@ export const menuCategories: MenuCategory[] = [
       },
       {
         id: "d5",
-        name: " affon & Cardamom Tart",
+        name: "Coffee & Cardamom Tart",
         description: "Buttery tart shell with a coffee-cardamom custard filling.",
         price: 300,
         dietary: ["V"],
